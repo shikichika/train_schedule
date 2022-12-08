@@ -1,11 +1,11 @@
 import streamlit as st
 import datetime
-import pytz
+from pytz import timezone
 import jpholiday
 
 
 
-dt_now = datetime.datetime.now()
+dt_now = datetime.datetime.now(timezone('Asia/Tokyo'))
 now_h = dt_now.hour
 result = jpholiday.is_holiday(dt_now)
 
